@@ -16,7 +16,7 @@
     crossorigin="anonymous"></script>
 </head>
 
-<body class="center" onload="SplashT">
+<body class="center" onload="SplashT(); if(localStorage.getItem('ab') === 'true') { AB(); }">
   <div class="f-nav"></div>
   <div id="particles-js">
     <script rel="preload" src="https://cdn.jsdelivr.net/particles.js/2.0.0/"></script>
