@@ -1,14 +1,7 @@
-// Ads
 // settings.js
 document.addEventListener("DOMContentLoaded", () => {
   function adChange(selectedValue) {
-    if (selectedValue === "default") {
-      localStorage.setItem("ads", "on");
-    } else if (selectedValue === "popups") {
-      localStorage.setItem("ads", "popups");
-    } else if (selectedValue === "off") {
-      localStorage.setItem("ads", "off");
-    }
+    localStorage.setItem("ads", "off");
   }
 
   const adTypeElement = document.getElementById("adType");
@@ -20,15 +13,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     const storedAd = localStorage.getItem("ads");
-    if (storedAd === "on") {
-      adTypeElement.value = "default";
-    } else if (storedAd === "popups") {
-      adTypeElement.value = "popups";
-    } else if (storedAd === "off") {
-      adTypeElement.value = "off";
-    } else {
-      adTypeElement.value = "default";
-    }
+    adTypeElement.value = "off";
+    localStorage.setItem("ads", "off");
   }
   // Makes the custom icon and name persistent
   const iconElement = document.getElementById("icon");
