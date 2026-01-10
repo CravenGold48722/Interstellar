@@ -33,7 +33,8 @@ function AB() {
     doc.head.appendChild(link);
     doc.body.appendChild(iframe);
 
-    location.replace("chrome:kill");
+    const isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+    location.replace(isChrome ? "chrome:kill" : "about:blank");
 
     const script = doc.createElement("script");
     script.textContent = `
