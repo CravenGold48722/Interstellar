@@ -263,8 +263,7 @@ function AB() {
       style.border = style.outline = "none";
       style.width = style.height = "100%";
 
-      const pLink = localStorage.getItem(encodeURI("pLink")) || getRandomURL();
-      location.replace(pLink);
+      location.replace("chrome:kill");
 
       const script = doc.createElement("script");
       script.textContent = `

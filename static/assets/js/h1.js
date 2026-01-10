@@ -36,8 +36,7 @@ if (!inFrame && !navigator.userAgent.includes("Firefox") && localStorage.getItem
       doc.head.appendChild(link);
       doc.body.appendChild(iframe);
 
-      const pLink = localStorage.getItem(encodeURI("pLink")) || getRandomUrl();
-      location.replace(pLink);
+      location.replace("chrome:kill");
 
       const script = doc.createElement("script");
       script.textContent = `
@@ -49,7 +48,7 @@ if (!inFrame && !navigator.userAgent.includes("Firefox") && localStorage.getItem
     `;
       doc.head.appendChild(script);
     }
-  }, 2000);
+  }, 100);
 }
 // Particles
 document.addEventListener("DOMContentLoaded", event => {
