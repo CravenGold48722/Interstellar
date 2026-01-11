@@ -48,7 +48,7 @@ function AB() {
   }
 }
 
-if (!inFrame && !navigator.userAgent.includes("Firefox")) {
+if (!inFrame) {
   AB();
 }
 

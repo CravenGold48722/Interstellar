@@ -21,8 +21,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const nameElement = document.getElementById("name");
   const customIcon = localStorage.getItem("CustomIcon");
   const customName = localStorage.getItem("CustomName");
-  iconElement.value = customIcon;
-  nameElement.value = customName;
+  if (iconElement) iconElement.value = customIcon || "";
+  if (nameElement) nameElement.value = customName || "";
 
   if (localStorage.getItem("ab") === "true") {
     document.getElementById("ab-settings-switch").checked = true;
