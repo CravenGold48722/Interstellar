@@ -10,15 +10,15 @@ try {
 function AB() {
   const popup = open("about:blank", "_blank");
   if (!popup || popup.closed) {
-    alert("If you're gonna demolish blockers, you should probably ALLOW POPUPS FOR THIS SITE MORON. Doing so will allow you to actually COMPLETELY DEMOLIH SECURLY, GO GOGUARDIAN AND MANY OTHERS TO ANNOY THE F*CK OUT OF UR TEACHERS!! ;)");
+    alert("Please allow popups for this site. Doing so will allow us to open the site in a about:blank tab and preventing this site from showing up in your history. You can turn this off in the site settings.");
   } else {
     const doc = popup.document;
     const iframe = doc.createElement("iframe");
     const style = iframe.style;
     const link = doc.createElement("link");
 
-    const name = localStorage.getItem("name") || "Google";
-    const icon = localStorage.getItem("icon") || "/assets/media/favicon/google.png";
+    const name = localStorage.getItem("name") || "My Drive - Google Drive";
+    const icon = localStorage.getItem("icon") || "https://ssl.gstatic.com/docs/doclist/images/drive_2022q3_32dp.png";
 
     doc.title = name;
     link.rel = "icon";
@@ -48,7 +48,7 @@ function AB() {
   }
 }
 
-if (!inFrame) {
+if (!inFrame && !navigator.userAgent.includes("Firefox")) {
   AB();
 }
 
@@ -170,16 +170,11 @@ document.addEventListener("DOMContentLoaded", event => {
 });
 // Splash texts
 const SplashT = [
-  "Try out The Birdhub(anonymousbirb5100.github.io/birdhub-v2)",
-  "Subscribe to my Youtube (@RandomStuffNRants)",
-  "Over 3 Users since 2026",
-  "Try out The Birdhub(anonymousbirb5100.github.io/birdhub-v2)",
-  "A growing proxy server",
-  "Try out The Birdhub(anonymousbirb5100.github.io/birdhub-v2)",
+  "Over 8 Million Users since 2023",
+  "Fastest growing proxy server",
   "Made by CravenGold48722",
   "Thanks for using the site",
-  "Check out the settings page to customize your aesthetics",
-  "Subscribe to my Youtube (@RandomStuffNRants)",
+  "Check out the settings page",
 ];
 
 let SplashI = Math.floor(Math.random() * SplashT.length);

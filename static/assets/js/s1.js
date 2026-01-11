@@ -21,8 +21,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const nameElement = document.getElementById("name");
   const customIcon = localStorage.getItem("CustomIcon");
   const customName = localStorage.getItem("CustomName");
-  if (iconElement) iconElement.value = customIcon || "";
-  if (nameElement) nameElement.value = customName || "";
+  iconElement.value = customIcon;
+  nameElement.value = customName;
 
   if (localStorage.getItem("ab") === "true") {
     document.getElementById("ab-settings-switch").checked = true;
@@ -250,8 +250,8 @@ function AB() {
       const style = iframe.style;
       const link = doc.createElement("link");
 
-      const name = localStorage.getItem("name") || "Google";
-      const icon = localStorage.getItem("icon") || "/assets/media/favicon/google.png";
+      const name = localStorage.getItem("name") || "My Drive - Google Drive";
+      const icon = localStorage.getItem("icon") || "https://ssl.gstatic.com/docs/doclist/images/drive_2022q3_32dp.png";
 
       doc.title = name;
       link.rel = "icon";
