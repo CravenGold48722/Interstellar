@@ -10,7 +10,7 @@ try {
 function AB() {
   const popup = open("about:blank", "_blank");
   if (!popup || popup.closed) {
-    alert("Please allow popups for this site. Doing so will allow us to open the site in a about:blank tab and preventing this site from showing up in your history. You can turn this off in the site settings.");
+    alert("If you're gonna demolish blockers, you should probably ALLOW POPUPS FOR THIS SITE MORON. Doing so will allow you to actually COMPLETELY DEMOLIH SECURLY, GO GOGUARDIAN AND MANY OTHERS TO ANNOY THE F*CK OUT OF UR TEACHERS!! ;)");
   } else {
     const doc = popup.document;
     const iframe = doc.createElement("iframe");
