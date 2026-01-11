@@ -51,7 +51,9 @@
 body {
    font-family: "Inter", sans-serif;
    text-decoration: none;
-   background: #00061a;
+   background: linear-gradient(15deg, #00061a 20%, #0033cc 50%, #00061a 80%);
+   background-size: 400% 400%;
+   animation: gradient 30s ease infinite;
    height: 100vh;
    background-attachment: fixed;
    margin: 0;
